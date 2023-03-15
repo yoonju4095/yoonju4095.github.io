@@ -1,7 +1,6 @@
 # yoonju4095.github.io
 
 개인 블로그
-냐옹
 
 항목
 
