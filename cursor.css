@@ -1,0 +1,86 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+header{
+  background-image: url("assets/jellyfish.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+ul a{
+  animation: fadein 3s;
+}
+@keyframes fadein{
+  from{
+    opacity: 0;
+    margin-right: 100px;
+  }
+  to{
+    opacity: 1;
+    margin-right: 0px;
+  }
+}
+ul{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+ul li{
+  list-style: none;
+}
+ul li a{
+  position: relative;
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 4em;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+header:hover .cursor{
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: 0.1s;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+ul li:hover ~ .cursor{
+  transform: scale(6);
+}
+
+/* 모바일 또는 테블릿 등 터치 기기의 경우 */
+@media screen and (hover: none) and (pointer: coarse) {
+  .cursor{
+    display: none;
+  }  
+}
+
+/* 우주인 */
+#astronaut{
+  z-index: 1;
+  position: absolute;
+  top: auto;
+  left: auto;
+  animation: float 4s infinite ease-in-out;
+}
+.zIndex2{
+  z-index: 2;
+}
+@keyframes float {
+  0%{
+    top: 35%;
+  }
+  50%{
+    top: 30%;
+  }
+  100%{
+    top: 35%;
+  }
+}
