@@ -61,26 +61,3 @@ ul li:hover ~ .cursor{
     display: none;
   }  
 }
-
-/* 우주인 */
-#astronaut{
-  z-index: 1;
-  position: absolute;
-  top: auto;
-  left: auto;
-  animation: float 4s infinite ease-in-out;
-}
-.zIndex2{
-  z-index: 2;
-}
-@keyframes float {
-  0%{
-    top: 35%;
-  }
-  50%{
-    top: 30%;
-  }
-  100%{
-    top: 35%;
-  }
-}
